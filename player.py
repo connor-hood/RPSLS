@@ -15,7 +15,7 @@ class Player:
 
     def select_choice(self):
         print(self.gestures)
-        attack_choice = int(input("Select a move"))
+        attack_choice = input("Select a move")
         self.chosen_gesture += attack_choice
 
     def choose_name(self):

@@ -9,7 +9,9 @@ class Game:
     def run_game(self):
         self.player_one.choose_name()
         self.player_one.person_or_computer()
-        self.player_one.select_choice()
+        player_choice = self.player_one.select_choice()
+        enemy_choice = self.player_two.select_choice()
+        self.battle(player_choice, enemy_choice)
 
     def battle(self, player_choice, opponent_choice):
         self.player_one.chosen_gesture = player_choice

@@ -9,3 +9,4 @@ class Computer(Player):
         print(self.gestures)
         attack_choice = random.choice(self.gestures)
         self.chosen_gesture += attack_choice
+        return self.chosen_gesture
