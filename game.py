@@ -6,5 +6,8 @@ class Game:
         self.player_two = Player()
 
     def run_game(self):
+        self.player_one.choose_name()
         self.player_one.select_choice()
+        self.player_one.person_or_computer()
+
 

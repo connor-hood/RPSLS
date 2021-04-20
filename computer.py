@@ -1,3 +1,5 @@
-class Computer:
-    def __init__(self):
-        pass
+from player import Player
+
+
+class Computer(Player):
+    super().__init__()

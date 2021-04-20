@@ -1,3 +1,6 @@
-class Human:
+from player import Player
+
+
+class human(Player):
     def __init__(self):
-        pass
+        super().__init__()
