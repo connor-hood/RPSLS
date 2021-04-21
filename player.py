@@ -7,11 +7,11 @@ class Player:
         self.populate_gestures()
 
     def populate_gestures(self):
-        self.gestures.append("0 - Rock")
-        self.gestures.append("1 - Paper")
-        self.gestures.append("2 - Scissors")
-        self.gestures.append("3 - Lizard")
-        self.gestures.append("4 - Spock")
+        self.gestures.append("Rock")
+        self.gestures.append("Paper")
+        self.gestures.append("Scissors")
+        self.gestures.append("Lizard")
+        self.gestures.append("Spock")
 
     def select_choice(self):
         print(self.gestures)
