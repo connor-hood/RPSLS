@@ -23,6 +23,7 @@ class Player:
         self.name = choice
 
     def person_or_computer(self):
+        print(f"Hello {self.name}")
         poc_choice = input("Would you like to battle a computer or player?")
         if poc_choice == "computer":
             print("The computer will win!")
