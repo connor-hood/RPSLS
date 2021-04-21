@@ -28,3 +28,4 @@ class Player:
             print("The computer will win!")
         else:
             print("May the best man win!")
+        return poc_choice

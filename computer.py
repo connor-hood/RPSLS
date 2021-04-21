@@ -3,7 +3,9 @@ import random
 
 
 class Computer(Player):
-    super().__init__()
+    def __init__(self):
+        super().__init__()
+        self.name = "Computer"
 
     def select_choice(self):
         print(self.gestures)
