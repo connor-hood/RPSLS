@@ -16,10 +16,10 @@ class Player:
     def select_choice(self):
         print(self.gestures)
         attack_choice = input("Select a move")
-        self.chosen_gesture += attack_choice
+        self.chosen_gesture = attack_choice
 
     def choose_name(self):
-        choice = input("what would you like your name to be?")
+        choice = input("What's your name?")
         self.name = choice
 
     def person_or_computer(self):

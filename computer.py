@@ -8,5 +8,5 @@ class Computer(Player):
     def select_choice(self):
         print(self.gestures)
         attack_choice = random.choice(self.gestures)
-        self.chosen_gesture += attack_choice
+        self.chosen_gesture = attack_choice
         return self.chosen_gesture

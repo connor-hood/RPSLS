@@ -9,65 +9,81 @@ class Game:
     def run_game(self):
         self.player_one.choose_name()
         self.player_one.person_or_computer()
-        player_choice = self.player_one.select_choice()
-        enemy_choice = self.player_two.select_choice()
-        self.battle(player_choice, enemy_choice)
+        self.battle()
 
-    def battle(self, player_choice, opponent_choice):
-        self.player_one.chosen_gesture = player_choice
-        self.player_two.chosen_gesture = opponent_choice
-        if player_choice == "Rock" and opponent_choice == "Scissors":
+    def battle(self):
+        player_choice = self.player_one.select_choice()
+        opponent_choice = self.player_two.select_choice()
+        if self.player_one.chosen_gesture == "Rock" and self.player_two.chosen_gesture == "Scissors":
             print(f'Rock crushes Scissors! \n {self.player_one.name} wins!')
             self.player_one.score += 1
-        elif player_choice == "Rock" and opponent_choice == "Lizard":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_one.chosen_gesture == "Rock" and self.player_two.chosen_gesture == "Lizard":
             print(f'Rock crushes Lizard! \n {self.player_one.name} wins!')
             self.player_one.score += 1
-        elif player_choice == "Paper" and opponent_choice == "Rock":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_one.chosen_gesture == "Paper" and self.player_two.chosen_gesture == "Rock":
             print(f'Paper covers Rock! \n {self.player_one.name} wins!')
             self.player_one.score += 1
-        elif player_choice == "Paper" and opponent_choice == "Spock":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_one.chosen_gesture == "Paper" and self.player_two.chosen_gesture == "Spock":
             print(f'Paper disproves Spock! \n {self.player_one.name} wins!')
             self.player_one.score += 1
-        elif player_choice == "Scissors" and opponent_choice == "Paper":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_one.chosen_gesture == "Scissors" and self.player_two.chosen_gesture == "Paper":
             print(f'Scissors cut Paper! \n {self.player_one.name} wins!')
             self.player_one.score += 1
-        elif player_choice == "Scissors" and opponent_choice == "Lizard":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_one.chosen_gesture == "Scissors" and self.player_two.chosen_gesture == "Lizard":
             print(f'Scissors decapitates Lizard \n {self.player_one.name} wins!')
             self.player_one.score += 1
-        elif player_choice == "Lizard" and opponent_choice == "Spock":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_one.chosen_gesture == "Lizard" and self.player_two.chosen_gesture == "Spock":
             print(f'Lizard poisons Spock \n {self.player_one.name} wins!')
             self.player_one.score += 1
-        elif player_choice == "Lizard" and opponent_choice == "Paper":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_one.chosen_gesture == "Lizard" and self.player_two.chosen_gesture == "Paper":
             print(f'Lizard eats paper \n {self.player_one.name} wins!')
             self.player_one.score += 1
-        elif player_choice == "Lizard" and opponent_choice == "Spock":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_one.chosen_gesture == "Lizard" and self.player_two.chosen_gesture == "Spock":
             print(f'Lizard poisons Spock \n {self.player_one.name} wins!')
             self.player_one.score += 1
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
         # break for separation of players
-        if opponent_choice == "Rock" and player_choice == "Scissors":
+        if self.player_two.chosen_gesture == "Rock" and self.player_one.chosen_gesture == "Scissors":
             print(f'Rock crushes Scissors! \n {self.player_two.name} wins!')
             self.player_two.score += 1
-        elif opponent_choice == "Rock" and player_choice == "Lizard":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_two.chosen_gesture == "Rock" and self.player_one.chosen_gesture == "Lizard":
             print(f'Rock crushes Lizard! \n {self.player_two.name} wins!')
             self.player_two.score += 1
-        elif opponent_choice == "Paper" and player_choice == "Rock":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_two.chosen_gesture == "Paper" and self.player_one.chosen_gesture == "Rock":
             print(f'Paper covers Rock! \n {self.player_two.name} wins!')
             self.player_two.score += 1
-        elif opponent_choice == "Paper" and player_choice == "Spock":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_two.chosen_gesture == "Paper" and self.player_one.chosen_gesture == "Spock":
             print(f'Paper disproves Spock! \n {self.player_two.name} wins!')
             self.player_two.score += 1
-        elif opponent_choice == "Scissors" and player_choice == "Paper":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_two.chosen_gesture == "Scissors" and self.player_one.chosen_gesture == "Paper":
             print(f'Scissors cut Paper! \n {self.player_two.name} wins!')
             self.player_two.score += 1
-        elif opponent_choice == "Scissors" and player_choice == "Lizard":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_two.chosen_gesture == "Scissors" and self.player_one.chosen_gesture == "Lizard":
             print(f'Scissors decapitates Lizard \n {self.player_two.name} wins!')
             self.player_two.score += 1
-        elif opponent_choice == "Lizard" and player_choice == "Spock":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_two.chosen_gesture == "Lizard" and self.player_one.chosen_gesture == "Spock":
             print(f'Lizard poisons Spock \n {self.player_two.name} wins!')
             self.player_two.score += 1
-        elif opponent_choice == "Lizard" and player_choice == "Paper":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_two.chosen_gesture == "Lizard" and self.player_one.chosen_gesture == "Paper":
             print(f'Lizard eats paper \n {self.player_two.name} wins!')
             self.player_two.score += 1
-        elif opponent_choice == "Lizard" and player_choice == "Spock":
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')
+        elif self.player_two.chosen_gesture == "Lizard" and self.player_one.chosen_gesture == "Spock":
             print(f'Lizard poisons Spock \n {self.player_two.name} wins!')
             self.player_two.score += 1
+            print(f'{self.player_one.name} : {self.player_one.score}, {self.player_two.name} : {self.player_two.score}')

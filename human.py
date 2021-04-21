@@ -10,5 +10,5 @@ class human(Player):
         attack_choice = input("Select a move")
         while attack_choice != "Rock" or "Paper" or "Scissors" or "Lizard" or "Spock":
             print("please enter a correct value")
-        self.chosen_gesture += attack_choice
+        self.chosen_gesture = attack_choice
         return self.chosen_gesture
